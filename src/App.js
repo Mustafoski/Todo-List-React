@@ -19,17 +19,39 @@ class App extends Component {
     };
   }
 
-  handleChange(e) {
-    console.log(hello);
-  }
-
+  handleChange = e => {
+    console.log("handleChange");
+  };
+  handleSubmit = e => {
+    console.log("handleSubmit");
+  };
+  handleClearList = () => {
+    console.log("clearList");
+  };
+  handleDelete = id => {
+    console.log(`handle edit ${id}`);
+  };
+  handleEdit = id => {
+    console.log(`edit edit ${id}`);
+  };
   render() {
     return (
-      <div>
-        <div className='container'>
-          <div className='row'>
-            <TodoInput />
-            <TodoList />
+      <div className='container'>
+        <div className='row'>
+          <div className='col-10 mx-auto col-md-8 mt-5'>
+            <h3 className='text-capitalize text-center'>Todo Input</h3>
+            <TodoInput
+              item={this.state.item}
+              handleChange={this.handleChange}
+              handleSubmit={this.handleSubmit}
+              handleEdit={this.handleEdit}
+            />
+            <TodoList
+              items={this.state.items}
+              handleDelete={this.handleDelete}
+              handleEdit={this.handleEdit}
+              handleClearList={this.handleClearList}
+            />
           </div>
         </div>
       </div>
