@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import TodoInput from "./components/TodoInput/TodoInput";
 import TodoList from "./components/TodoList/TodoList";
-// showing vs-code github setup
+// learning to use git from vscode
 class App extends Component {
   render() {
     return (
